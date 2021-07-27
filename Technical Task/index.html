@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Nakibul Shaki">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Product Cart</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--Font-Awesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom styles -->
+  <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="p-3 bg-custom text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <i class="fa fa-shopping-cart fa-2x"></i>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          
+          <li><a href="#" class="nav-link px-2 text-white">Shopping Cart</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" id="search" placeholder="Search..." aria-label="Search">
+        </form>
+
+      
+      </div>
+    </div>
+  </header>
+  <main>
+   
+    <section class="container">
+     <br/>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Products
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <!-- BEGIN PRODUCTS -->
+                    <div class="contents scrollable row" id="products">
+
+                    </div>
+                    <!-- END PRODUCTS -->
+                </div>
+            </div>
+        </div>
+          
+        </div>
+        <div class="col-md-5">
+          
+         
+          <!-- Product Cart  -->
+          <div class="scrollable card card-body" id="product-cart">
+            <table class="table">
+              <thead>
+                <tr class="success">
+                  <th class="font-weight-bold" style=" width:40%;">Name</th>
+                  <th class="font-weight-bold" style="width: 15%;text-align:center;">Price</th>
+                  <th class="font-weight-bold" style="width: 15%;text-align:center;">Qty</th>
+                  <th class="font-weight-bold" style="width: 15%;text-align:right;">Subtotal</th>
+                  <th class="font-weight-bold" style="width: 15%;text-align:right;padding-right:15px !important;"><i
+                      class="fa fa-trash"></i></th>
+                </tr>
+              </thead>
+              <!-- Cart Items -->
+              <tbody class="cart-list" id="cartList">
+
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <!-- End Product Cart  -->
+           <!-- Pay Buttons  -->
+       
+        <div class="btn-group btn-group-lg w-100">
+
+          <button style="width:80%;" type="button"  class="btn bg-ymarr-success" id="payment">
+              <h4 class="payBtn-text-left"> Pay</h4>
+              <small style="color:azure"> <small style="color:azure" id="totalItems">0</small> items</small>
+              <h4 class="payBtn-text-right" id="totalAmmount">0.00</h4>
+          </button>
+          <button style="width:20%;" class="btn bg-danger" id="reset" data-provide="tooltip" data-placement="top" title="Reset Cart">
+              <i class="fa fa-times-circle reset-btn center-vh"></i> 
+          </button>
+      </div>
+     
+      <!-- End pay Buttons  -->
+        </div>
+      </div>
+
+      </div>
+
+    </section>
+
+  </main>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+  <script src="/assets/cart.js"></script>
+  <script>
+    console.log(products);
+     ProductLoad(products);
+
+     DisplayCart();
+  </script>
+</body>
+
+</html>
