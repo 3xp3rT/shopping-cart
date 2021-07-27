@@ -9,11 +9,11 @@ Live URL:http://nakib11-001-site3.itempurl.com/index.html
 Feature:
 - Featch products
 - Add to cart
-- total calculation
-- increase item
-- decrease item
-- search product
-- save to localStorage
+- Total calculation
+- Increase item
+- Decrease item
+- Search product
+- Save to localStorage
 
 
 ![alt text](https://github.com/3xp3rT/shopping-cart/blob/main/shopping-cart.jpg)
