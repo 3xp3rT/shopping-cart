@@ -54,6 +54,7 @@
           color:darkred;
           margin-right:-10px;
           padding: 10px;
+          padding-top: 4px !important;
       }
 
       .quantity.buttons_added .plus {
@@ -106,7 +107,8 @@ text-align: right;
 .card-product .info-wrap {
   overflow: hidden;
   padding: 7px;
-  border-top: 1px solid #eee;
+  height: 100px;
+
 }
 .card-product .bottom-wrap {
   padding: 5px;
@@ -119,14 +121,23 @@ text-align: right;
   vertical-align: middle;
 }
 
-.card-product .price-old {
-  color: #999;
+.card-product {
+  color: rgb(255, 251, 251);
+  border-radius: 20px;
+}
+.card-product:hover {
+  color: rgb(19, 18, 18);
+  background: linear-gradient(rgba(107, 158, 107, 0.671),rgba(31, 235, 24, 0.651)), url(/assets/dist/img/plus_PNG115.png) !important;
+  
+  border-radius: 20px;
 }
 .title,.price-wrap{
   margin-bottom: 0;
 }
 .desc{
   font-size: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .payBtn-text-right {

@@ -21,51 +21,74 @@
 </head>
 
 <body>
-  <header class="p-3 bg-dark text-white">
+  <header class="p-3 bg-custom text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        <i class="fa fa-shopping-cart fa-2x"></i>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          
+          <li><a href="#" class="nav-link px-2 text-white">Shopping Cart</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          <input type="search" class="form-control form-control-dark" id="search" placeholder="Search..." aria-label="Search">
         </form>
 
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
-        </div>
+      
       </div>
     </div>
   </header>
   <main>
 
     <section class="container">
-   
-      <div class="bd-callout bd-callout-info">
-        <h4 id="dealing-with-specificity">Dealing with specificity</h4>
+      <div class="jumbotron text-center">
+        <h1 class="display-3">Thank You!</h1>
+        <p class="lead"><strong>We appreciate the support</strong> Stay with us for budget shopping</p>
         
-        <p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element’s content in a <code class="highlighter-rouge">&lt;div&gt;</code> with the class.</p>
-        </div>
-
+            <!-- Product Cart  -->
+            <div class=" card card-body" id="product-cart">
+              <table class="table">
+                <thead>
+                  <tr class="success">
+                    <th class="font-weight-bold" style=" width:40%;">Name</th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:center;">Qty</th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:right;">Price</th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:right;">Subtotal</th>
+                   </tr>
+                </thead>
+                <!-- Cart Items -->
+                <tbody class="cart-list" id="cartListNoEdit">
+  
+                </tbody>
+                <tfoot>
+                  <tr class="success">
+                    <th class="font-weight-bold" style=" width:40%;text-align:right;">Items</th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:center;" id="totalItems"></th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:right;">Total</th>
+                    <th class="font-weight-bold" style="width: 15%;text-align:right;"id="totalAmmount"></th>
+                   </tr>
+                </tfoot>
+              </table>
+  
+            </div>
+  
+            <!-- End Product Cart  -->
+      
+        <p class="lead">
+          <button class="btn btn-success" id="ContinueShopping" style="padding-top: 14px;margin-top:5px;
+          border-radius: 29px;">Continue Shopping</a>
+        </p>
+      </div>
     </section>
 
   </main>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
   <script src="/assets/cart.js"></script>
   <script>
-    console.log(products);
-     ProductLoad(products);
-     DisplayCart();
+     DisplaySale();
   </script>
 </body>
 
